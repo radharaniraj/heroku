@@ -5,6 +5,7 @@ const express = require("express");
 
 // Creates an express object
 const app = express();
+const port = process.env.PORT || 3000
 
 // It listens to HTTP get request.
 // Here it listens to the root i.e '/'
@@ -21,9 +22,9 @@ res.send("<h1> Hello World </h1>");
 // given instead of 3000, the only
 // condition is that no other server
 // should be running at that port
-app.listen(3000, () => {
+app.listen(port, () => {
 
 // Print in the console when the
 // servers starts to listen on 3000
-console.log("Listening to port 3000");
+console.log("Listening to port "+port );
 });
